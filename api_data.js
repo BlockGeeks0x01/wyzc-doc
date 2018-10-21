@@ -89,6 +89,29 @@ define({ "api": [
     "groupTitle": "Banner"
   },
   {
+    "type": "put",
+    "url": "/api/wyzc/company/:id",
+    "title": "修改公司",
+    "name": "UpdateCompany",
+    "group": "Company",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>姓名</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "Company"
+  },
+  {
     "type": "post",
     "url": "/api/wyzc/knowledge",
     "title": "创建知识库",
@@ -480,6 +503,408 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "wyzc/frontend/api.py",
     "groupTitle": "activity"
+  },
+  {
+    "type": "get",
+    "url": "/api/wyzc/city_company",
+    "title": "城市数据",
+    "name": "CityCompany",
+    "group": "citycompany",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\n    \"id\": 3,\n    \"city\": \"杭州\",\n    \"company_total_num\": 98\n    \"company_increment\": 8\n    \"trade_num\": 12\n}]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "citycompany"
+  },
+  {
+    "type": "post",
+    "url": "/api/wyzc/city_company",
+    "title": "创建城市数据",
+    "name": "CreateCityCompany",
+    "group": "citycompany",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "city",
+            "description": "<p>城市</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "company_total_num",
+            "description": "<p>上市公司数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "company_increment",
+            "description": "<p>上市公司新增数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "trade_num",
+            "description": "<p>成交量</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "citycompany"
+  },
+  {
+    "type": "delete",
+    "url": "/api/wyzc/city_company/:id",
+    "title": "删除城市数据",
+    "name": "DeleteCityCompany",
+    "group": "citycompany",
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "citycompany"
+  },
+  {
+    "type": "post",
+    "url": "/api/wyzc/city_company",
+    "title": "修改城市数据",
+    "name": "UpdateCityCompany",
+    "group": "citycompany",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "city",
+            "description": "<p>城市</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "company_total_num",
+            "description": "<p>上市公司数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "company_increment",
+            "description": "<p>上市公司新增数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "trade_num",
+            "description": "<p>成交量</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "citycompany"
+  },
+  {
+    "type": "get",
+    "url": "/api/wyzc/company",
+    "title": "公司",
+    "name": "Company",
+    "group": "company",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\n    \"id\": 1,\n    \"name\": \"姓名\"\n}]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "company"
+  },
+  {
+    "type": "post",
+    "url": "/api/wyzc/company",
+    "title": "创建公司",
+    "name": "CreateCompany",
+    "group": "company",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>姓名</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "company"
+  },
+  {
+    "type": "delete",
+    "url": "/api/wyzc/company/:id",
+    "title": "删除公司",
+    "name": "DeleteCompany",
+    "group": "company",
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "company"
+  },
+  {
+    "type": "post",
+    "url": "/api/wyzc/info",
+    "title": "创建字段数据",
+    "name": "CreateInfo",
+    "group": "info",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "key",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "value",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "info"
+  },
+  {
+    "type": "delete",
+    "url": "/api/wyzc/info/:id",
+    "title": "删除字段数据",
+    "name": "DeleteInfo",
+    "group": "info",
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "info"
+  },
+  {
+    "type": "put",
+    "url": "/api/wyzc/info/:id",
+    "title": "修改字段数据",
+    "name": "UpdateInfo",
+    "group": "info",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "key",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "value",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "info"
+  },
+  {
+    "type": "get",
+    "url": "/api/wyzc/info",
+    "title": "字段数据",
+    "name": "info",
+    "group": "info",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\n    \"id\": 3,\n    \"key\": \"k\",\n    \"value\": \"12\"\n}]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "info"
+  },
+  {
+    "type": "post",
+    "url": "/api/wyzc/member",
+    "title": "创建会员",
+    "name": "CreateMember",
+    "group": "member",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "org_name",
+            "description": "<p>公司名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "type",
+            "description": "<p>类型，1会长，2理事，3会员</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "order_no",
+            "description": "<p>排序号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "image",
+            "description": "<p>图片</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "member"
+  },
+  {
+    "type": "delete",
+    "url": "/api/wyzc/member/:id",
+    "title": "删除会员",
+    "name": "DeleteMember",
+    "group": "member",
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "member"
+  },
+  {
+    "type": "get",
+    "url": "/api/wyzc/member",
+    "title": "会员",
+    "name": "Member",
+    "group": "member",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "type",
+            "description": "<p>类型</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\n    \"id\": 1,\n    \"name\": \"姓名\",\n    \"org_name\": \"公司名\",\n    \"image\": \"http://aaa.jpg\",\n}]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "member"
+  },
+  {
+    "type": "put",
+    "url": "/api/wyzc/member/:id",
+    "title": "修改会员",
+    "name": "UpdateMember",
+    "group": "member",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "org_name",
+            "description": "<p>公司名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "type",
+            "description": "<p>类型，1会长，2理事，3会员</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "order_no",
+            "description": "<p>排序号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "image",
+            "description": "<p>图片</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "member"
   },
   {
     "type": "post",
