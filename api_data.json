@@ -566,11 +566,24 @@
     "title": "城市数据",
     "name": "CityCompany",
     "group": "citycompany",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": true,
+            "field": "year",
+            "description": "<p>年份，默认取当前年份的数据</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 3,\n    \"city\": \"杭州\",\n    \"company_total_num\": 98\n    \"company_increment\": 8\n    \"trade_num\": 12\n}]",
+          "content": "[{\n    \"id\": 3,\n    \"city\": \"杭州\",\n    \"year\": 2019,\n    \"company_total_num\": 98\n    \"company_increment\": 8\n    \"trade_num\": 12\n}]",
           "type": "json"
         }
       ]
@@ -594,6 +607,13 @@
             "optional": false,
             "field": "city",
             "description": "<p>城市</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "year",
+            "description": "<p>年份</p>"
           },
           {
             "group": "Parameter",
@@ -635,7 +655,7 @@
   },
   {
     "type": "post",
-    "url": "/api/wyzc/city_company",
+    "url": "/api/wyzc/city_company/:id",
     "title": "修改城市数据",
     "name": "UpdateCityCompany",
     "group": "citycompany",
@@ -1097,5 +1117,163 @@
     "version": "0.0.0",
     "filename": "wyzc/frontend/api.py",
     "groupTitle": "notice"
+  },
+  {
+    "type": "post",
+    "url": "/api/wyzc/stock_market",
+    "title": "创建股市数据",
+    "name": "CreateStockMarket",
+    "group": "stock_market",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "year",
+            "description": "<p>年份</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "total_market_value",
+            "description": "<p>总市值</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "ipo_num",
+            "description": "<p>IPO数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "refinancing",
+            "description": "<p>再融资</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "trade_num",
+            "description": "<p>成交量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "trade_value",
+            "description": "<p>成交额</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "stock_market"
+  },
+  {
+    "type": "delete",
+    "url": "/api/wyzc/stock_market/:id",
+    "title": "删除股市数据",
+    "name": "DeleteStockMarket",
+    "group": "stock_market",
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "stock_market"
+  },
+  {
+    "type": "get",
+    "url": "/api/wyzc/stock_market",
+    "title": "股市数据",
+    "name": "StockMarket",
+    "group": "stock_market",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": true,
+            "field": "year",
+            "description": "<p>年份，默认取当前年份的数据</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"id\": 3,\n    \"year\": 2018,\n    \"total_market_value\": 9999\n    \"ipo_num\": 8,\n    \"refinancing\":339.3,\n    \"trade_num\": 12,\n    \"trade_value\": 12\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "stock_market"
+  },
+  {
+    "type": "post",
+    "url": "/api/wyzc/stock_market/:id",
+    "title": "修改股市数据",
+    "name": "UpdateStockMarket",
+    "group": "stock_market",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "year",
+            "description": "<p>年份</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "total_market_value",
+            "description": "<p>总市值</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "ipo_num",
+            "description": "<p>IPO数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "refinancing",
+            "description": "<p>再融资</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "trade_num",
+            "description": "<p>成交量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "trade_value",
+            "description": "<p>成交额</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "stock_market"
   }
 ]
