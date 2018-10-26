@@ -133,6 +133,20 @@ define({ "api": [
             "optional": false,
             "field": "content",
             "description": "<p>内容</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "digest",
+            "description": "<p>摘要</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "preview_image",
+            "description": "<p>预览图</p>"
           }
         ]
       }
@@ -161,7 +175,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"created_time\": \"2017-12-16T16:23:33\"\n}",
+          "content": "{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"digest\": \"摘要\",\n    \"preview_image\": \"http://www.sss.mp4\",\n    \"created_time\": \"2017-12-16T16:23:33\"\n}",
           "type": "json"
         }
       ]
@@ -180,7 +194,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
+          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"digest\": \"摘要\",\n    \"preview_image\": \"http://www.sss.mp4\",\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
           "type": "json"
         }
       ]
@@ -211,6 +225,20 @@ define({ "api": [
             "optional": false,
             "field": "content",
             "description": "<p>内容</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "digest",
+            "description": "<p>摘要</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "preview_image",
+            "description": "<p>预览图</p>"
           }
         ]
       }
@@ -248,6 +276,13 @@ define({ "api": [
             "optional": false,
             "field": "digest",
             "description": "<p>摘要</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "preview_image",
+            "description": "<p>预览图</p>"
           },
           {
             "group": "Parameter",
@@ -296,7 +331,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"digest\": \"摘要\"\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
+          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"digest\": \"摘要\"\n    \"preview_image\": \"http://www.m3.mp4\"\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
           "type": "json"
         }
       ]
@@ -356,6 +391,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "preview_image",
+            "description": "<p>预览图</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "int",
             "optional": false,
             "field": "type",
@@ -378,7 +420,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"description\": \"描述\",\n    \"person\": \"人物\",\n    \"image\": \"http://aaa.jpg\",\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
+          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"description\": \"描述\",\n    \"person\": \"人物\",\n    \"image\": \"http://aaa.jpg\",\n    \"video\": \"httt://www.ss.mp4\"\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
           "type": "json"
         }
       ]
@@ -442,6 +484,13 @@ define({ "api": [
             "optional": false,
             "field": "image",
             "description": "<p>图片</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "video",
+            "description": "<p>视频</p>"
           }
         ]
       }
@@ -496,6 +545,13 @@ define({ "api": [
             "optional": false,
             "field": "image",
             "description": "<p>图片</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "video",
+            "description": "<p>视频</p>"
           }
         ]
       }
@@ -846,7 +902,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 1,\n    \"name\": \"姓名\",\n    \"org_name\": \"公司名\",\n    \"image\": \"http://aaa.jpg\",\n}]",
+          "content": "[{\n    \"id\": 1,\n    \"name\": \"姓名\",\n    \"org_name\": \"公司名\",\n    \"image\": \"http://aaa.jpg\",\n    \"order_no\": 3\n}]",
           "type": "json"
         }
       ]
@@ -935,6 +991,13 @@ define({ "api": [
             "optional": false,
             "field": "digest",
             "description": "<p>摘要</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "preview_image",
+            "description": "<p>预览图</p>"
           }
         ]
       }
@@ -963,7 +1026,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"digest\": \"摘要\"\n    \"created_time\": \"2017-12-16T16:23:33\"\n}",
+          "content": "{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"content\": \"内容\",\n    \"digest\": \"摘要\",\n    \"preview_image\": \"http://www.ss.jpg\",\n    \"created_time\": \"2017-12-16T16:23:33\"\n}",
           "type": "json"
         }
       ]
@@ -982,7 +1045,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"digest\": \"摘要\"\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
+          "content": "[{\n    \"id\": 1,\n    \"title\": \"标题\",\n    \"digest\": \"摘要\",\n    \"preview_image\": \"http://www.ss.jpg\",\n    \"created_time\": \"2017-12-16T16:23:33\"\n}]",
           "type": "json"
         }
       ]
@@ -1020,6 +1083,13 @@ define({ "api": [
             "optional": false,
             "field": "digest",
             "description": "<p>摘要</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "preview_image",
+            "description": "<p>预览图</p>"
           }
         ]
       }
