@@ -881,6 +881,13 @@ define({ "api": [
             "optional": false,
             "field": "image",
             "description": "<p>图片</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "url",
+            "description": "<p>链接</p>"
           }
         ]
       }
@@ -922,7 +929,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 1,\n    \"name\": \"姓名\",\n    \"org_name\": \"公司名\",\n    \"image\": \"http://aaa.jpg\",\n    \"order_no\": 3\n}]",
+          "content": "[{\n    \"id\": 1,\n    \"name\": \"姓名\",\n    \"org_name\": \"公司名\",\n    \"image\": \"http://aaa.jpg\",\n    \"order_no\": 3,\n    \"url\": \"http://www.baidu.com\"\n}]",
           "type": "json"
         }
       ]
@@ -974,6 +981,13 @@ define({ "api": [
             "optional": false,
             "field": "image",
             "description": "<p>图片</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "url",
+            "description": "<p>链接</p>"
           }
         ]
       }
@@ -1168,6 +1182,13 @@ define({ "api": [
             "optional": false,
             "field": "trade_value",
             "description": "<p>成交额</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "company_num",
+            "description": "<p>上市公司数量</p>"
           }
         ]
       }
@@ -1209,7 +1230,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 3,\n    \"year\": 2018,\n    \"total_market_value\": 9999\n    \"ipo_num\": 8,\n    \"refinancing\":339.3,\n    \"trade_num\": 12,\n    \"trade_value\": 12\n}",
+          "content": "{\n    \"id\": 3,\n    \"year\": 2018,\n    \"total_market_value\": 9999\n    \"ipo_num\": 8,\n    \"refinancing\":339.3,\n    \"trade_num\": 12,\n    \"trade_value\": 12,\n    \"company_num\": 2,\n}",
           "type": "json"
         }
       ]
@@ -1268,6 +1289,13 @@ define({ "api": [
             "optional": false,
             "field": "trade_value",
             "description": "<p>成交额</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "company_num",
+            "description": "<p>上市公司数量</p>"
           }
         ]
       }
