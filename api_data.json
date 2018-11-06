@@ -40,6 +40,13 @@
             "optional": false,
             "field": "image",
             "description": "<p>图片地址</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "content",
+            "description": "<p>内容</p>"
           }
         ]
       }
@@ -54,6 +61,25 @@
     "title": "删除轮播图",
     "name": "DeleteBanner",
     "group": "Banner",
+    "version": "0.0.0",
+    "filename": "wyzc/frontend/api.py",
+    "groupTitle": "Banner"
+  },
+  {
+    "type": "get",
+    "url": "/api/wyzc/banner/:id",
+    "title": "轮播图详情",
+    "name": "GetBannerDetail",
+    "group": "Banner",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"id\": 1,\n    \"url\": \"http://www.baidu.com\",\n    \"image\": \"http://www.xxx.jpg\",\n    \"content\": \"内容\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "wyzc/frontend/api.py",
     "groupTitle": "Banner"
@@ -80,6 +106,13 @@
             "optional": false,
             "field": "image",
             "description": "<p>图片地址</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "content",
+            "description": "<p>内容</p>"
           }
         ]
       }
