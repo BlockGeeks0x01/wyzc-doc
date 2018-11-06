@@ -9,7 +9,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"id\": 1,\n    \"url\": \"http://www.baidu.com\",\n    \"image\": \"http://www.xxx.jpg\"\n}]",
+          "content": "[{\n    \"id\": 1,\n    \"url\": \"http://www.baidu.com\",\n    \"image\": \"http://www.xxx.jpg\",\n    \"title\": \"标题\"\n}]",
           "type": "json"
         }
       ]
@@ -47,6 +47,13 @@ define({ "api": [
             "optional": false,
             "field": "content",
             "description": "<p>内容</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "title",
+            "description": "<p>标题</p>"
           }
         ]
       }
@@ -75,7 +82,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 1,\n    \"url\": \"http://www.baidu.com\",\n    \"image\": \"http://www.xxx.jpg\",\n    \"content\": \"内容\"\n}",
+          "content": "{\n    \"id\": 1,\n    \"url\": \"http://www.baidu.com\",\n    \"image\": \"http://www.xxx.jpg\",\n    \"content\": \"内容\",\n    \"title\": \"标题\"\n}",
           "type": "json"
         }
       ]
@@ -113,6 +120,13 @@ define({ "api": [
             "optional": false,
             "field": "content",
             "description": "<p>内容</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "title",
+            "description": "<p>标题</p>"
           }
         ]
       }
