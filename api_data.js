@@ -336,7 +336,7 @@ define({ "api": [
             "type": "int",
             "optional": false,
             "field": "type",
-            "description": "<p>类型,1事件，2人物观点，3政策</p>"
+            "description": "<p>类型,1事件，2人物观点，3政策,4浙股</p>"
           }
         ]
       }
@@ -448,7 +448,7 @@ define({ "api": [
             "type": "int",
             "optional": false,
             "field": "type",
-            "description": "<p>类型,1事件，2人物观点，3政策</p>"
+            "description": "<p>类型,1事件，2人物观点，3政策，4浙股</p>"
           }
         ]
       }
@@ -1264,6 +1264,13 @@ define({ "api": [
             "optional": false,
             "field": "company_num",
             "description": "<p>上市公司数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "datetime",
+            "optional": false,
+            "field": "deadline",
+            "description": "<p>截至日期</p>"
           }
         ]
       }
@@ -1305,7 +1312,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"id\": 3,\n    \"year\": 2018,\n    \"total_market_value\": 9999\n    \"ipo_num\": 8,\n    \"refinancing\":339.3,\n    \"trade_num\": 12,\n    \"trade_value\": 12,\n    \"company_num\": 2,\n}",
+          "content": "{\n    \"id\": 3,\n    \"year\": 2018,\n    \"total_market_value\": 9999\n    \"ipo_num\": 8,\n    \"refinancing\":339.3,\n    \"trade_num\": 12,\n    \"trade_value\": 12,\n    \"company_num\": 2,\n    \"deadline\": \"2018-12-19T15:00:00\"\n}",
           "type": "json"
         }
       ]
@@ -1371,6 +1378,13 @@ define({ "api": [
             "optional": false,
             "field": "company_num",
             "description": "<p>上市公司数量</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "datetime",
+            "optional": false,
+            "field": "deadline",
+            "description": "<p>截至日期</p>"
           }
         ]
       }
